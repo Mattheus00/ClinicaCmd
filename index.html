@@ -123,6 +123,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .mobile-nav.open a:nth-child(2){transition-delay:.06s}.mobile-nav.open a:nth-child(3){transition-delay:.12s}.mobile-nav.open a:nth-child(4){transition-delay:.18s}
 .mobile-nav a.mn-cta{margin-top:18px;border:0;font:500 1rem/1 var(--sans);justify-content:center;background:var(--cream);color:var(--forest);border-radius:999px;min-height:56px}
 .menu-open .header-bar{background:transparent;box-shadow:none;border-color:transparent;color:var(--cream);-webkit-backdrop-filter:none;backdrop-filter:none}
+.menu-open body{overflow:hidden}
 @media (min-width:1024px){.desktop-nav{display:flex}.menu-button,.mobile-nav{display:none!important}}
 @media (max-width:420px){.brand small{display:none}.brand{font-size:1.08rem}}
 
@@ -142,8 +143,8 @@ ul,ol{margin:0;padding:0;list-style:none}
 .hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,32,25,.5) 0%,rgba(20,32,25,.18) 45%,rgba(20,32,25,0) 70%),linear-gradient(180deg,rgba(20,32,25,.62) 0%,rgba(20,32,25,.14) 24%,rgba(20,32,25,.28) 48%,rgba(20,32,25,.88) 100%)}
 .hero-shade-2{position:absolute;inset:0;background:rgba(18,30,23,.6);opacity:0}
 .hero-copy{position:relative;z-index:2;padding:0 var(--gut) clamp(100px,17vh,180px);max-width:calc(var(--max) + 2*var(--gut));width:100%;margin-inline:auto}
-.hero-copy .eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:clamp(18px,3vh,30px);color:rgba(246,243,234,.95)}
-.hero-copy .eyebrow::before{content:"";width:34px;height:1px;background:currentColor}
+.hero-copy .eyebrow{display:flex;align-items:center;gap:10px;width:fit-content;max-width:100%;margin-bottom:clamp(18px,3vh,30px);padding:6px 10px;background:rgba(20,32,25,.76);color:var(--cream);font-size:.8125rem;font-weight:600;letter-spacing:.12em}
+.hero-copy .eyebrow::before{content:"";width:clamp(14px,3vw,34px);height:1px;flex-shrink:0;background:currentColor}
 .hero-title{font:300 clamp(3.05rem,10.2vw,10.4rem)/.9 var(--serif);letter-spacing:-.025em}
 .hero-title em{font-style:italic;font-weight:300;color:#f1e7cf}
 .hero-row{display:flex;flex-wrap:wrap;align-items:center;gap:18px 28px;margin-top:clamp(26px,4.5vh,44px)}
@@ -192,7 +193,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .sec-head{display:grid;gap:26px;margin-bottom:clamp(44px,7vw,96px)}
 .sec-title{font:300 clamp(2.6rem,7.4vw,6.6rem)/.95 var(--serif);letter-spacing:-.02em;color:var(--forest)}
 .sec-title em{font-style:italic}
-.sec-lead{max-width:36ch;color:var(--muted);font:300 clamp(1.25rem,1.8vw,1.5rem)/1.35 var(--serif)}
+.sec-lead{max-width:36ch;color:var(--muted);font:400 clamp(1.25rem,1.8vw,1.5rem)/1.4 var(--serif)}
 .services-layout{display:grid;gap:40px}
 .svc-visual{display:none}
 .svc-list{border-bottom:1px solid var(--line)}
@@ -203,7 +204,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .svc-num{font:italic 400 1.05rem/1 var(--serif);color:#8a6a3a;width:2em}
 .svc-title{display:grid;gap:6px}
 .svc-name{font:300 clamp(1.75rem,4vw,2.9rem)/1.02 var(--serif);letter-spacing:-.01em;color:var(--forest);transition:transform .7s var(--ease)}
-.svc-pro{font:500 .72rem/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--sage-ink)}
+.svc-pro,.specialty{font:500 .875rem/1.4 var(--sans);color:var(--sage-ink)}
 .svc-icon{position:relative;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);transition:background-color .5s var(--ease),border-color .5s,transform .7s var(--ease)}
 .svc-icon::before,.svc-icon::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:1px;margin:-.5px 0 0 -7px;background:var(--forest);transition:transform .6s var(--ease),background-color .4s}
 .svc-icon::after{transform:rotate(90deg)}
@@ -220,7 +221,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .svc.is-open .svc-panel-grid{opacity:1;transform:none;transition-delay:.12s}
 .svc-img{display:block;border-radius:18px;overflow:hidden;aspect-ratio:16/8}
 .svc-img img{width:100%;height:100%;object-fit:cover}
-.svc-copy p{font:300 clamp(1.3rem,2.2vw,1.6rem)/1.35 var(--serif);color:var(--ink);max-width:34ch}
+.svc-copy p{font:400 clamp(1.3rem,2.2vw,1.6rem)/1.4 var(--serif);color:var(--ink);max-width:34ch}
 .svc-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;margin-top:22px}
 .svc-actions .text-link{color:var(--forest)}
 @media (min-width:768px){.svc-btn{grid-template-columns:4em 1fr auto}.svc-title{grid-template-columns:1fr auto;align-items:baseline;gap:22px}.svc-panel-grid{padding-left:4em}}
@@ -304,7 +305,6 @@ ul,ol{margin:0;padding:0;list-style:none}
 @media (hover:none){.portrait-cta{transform:none}}
 .profile-info{padding-top:18px;display:grid;gap:4px}
 .profile-idx{font:italic 400 .95rem/1 var(--serif);color:#8a6a3a;margin-bottom:6px}
-.specialty{font:500 .7rem/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--sage-ink)}
 .profile-info h3{font:400 clamp(1.5rem,2.2vw,1.85rem)/1.1 var(--serif);color:var(--forest);transition:transform .7s var(--ease)}
 .profile:hover .profile-info h3{transform:translateX(8px)}
 .profile-info .text-link{color:var(--forest);justify-self:start}
@@ -524,7 +524,7 @@ ul,ol{margin:0;padding:0;list-style:none}
             <div class="svc-panel-in"><div class="svc-panel-grid">
               <span class="svc-img"><img src="public/media/images/recepcao.webp" width="1536" height="510" loading="lazy" decoding="async" alt="Cena conceitual de recepcao fornecida para a clínica"></span>
               <div class="svc-copy"><p>Um espaço de escuta e acolhimento para cuidar das emoções e da sua história.</p>
-                <div class="svc-actions"><a class="btn btn-dark" href="https://wa.me/5531971573868?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20atendimento%20de%20Psicologia." target="_blank" rel="noopener">Agendar pelo WhatsApp <span aria-hidden="true">↗</span></a><a class="text-link" href="#profissional-0" data-profile="0">Conhecer a profissional <span aria-hidden="true">→</span></a></div>
+                <div class="svc-actions"><a class="btn btn-dark" href="https://wa.me/5531971573868?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20atendimento%20de%20Psicologia." target="_blank" rel="noopener">Agendar pelo WhatsApp <span aria-hidden="true">↗</span></a><a class="text-link" href="#profissional-0" data-profile="0">Conhecer Daniella Utsch <span aria-hidden="true">→</span></a><a class="text-link" href="#profissional-5" data-profile="5">Conhecer Joana Nasser <span aria-hidden="true">→</span></a></div>
               </div>
             </div></div>
           </div>
@@ -690,7 +690,7 @@ ul,ol{margin:0;padding:0;list-style:none}
    </div>
    <div class="info-cols fade-up">
     <div><h3>Endereço</h3><p>Rua Honório Pires de Souza, 273 · Vila São Francisco<br>Conceição do Mato Dentro, MG</p></div>
-    <div><h3>WhatsApp</h3><a class="text-link" href="tel:+5531971573868">(31) 97157-3868</a></div>
+    <div><h3>WhatsApp</h3><a class="text-link" href="https://wa.me/5531971573868" target="_blank" rel="noopener">(31) 97157-3868</a></div>
     <div><h3>Instagram</h3><a class="text-link" href="https://www.instagram.com/clinica_saudeemequilibrio/" target="_blank" rel="noopener">@clinica_saudeemequilibrio ↗</a></div>
    </div>
   </div>
@@ -741,16 +741,49 @@ function onScroll(){ if(ticking) return; ticking=true; requestAnimationFrame(()=
 addEventListener('scroll',onScroll,{passive:true}); onScroll();
 
 /* -- Menu do celular -- */
-const mb=q('.menu-button'), mn=q('#mobile-nav');
-function setMenu(open){mb.setAttribute('aria-expanded',open);q('.mb-label',mb).textContent=open?'Fechar':'Menu';root.classList.toggle('menu-open',open);
-  if(open){mn.hidden=false;requestAnimationFrame(()=>requestAnimationFrame(()=>mn.classList.add('open')));lenis&&lenis.stop();setTimeout(()=>q('a',mn).focus(),50);}
-  else{mn.classList.remove('open');lenis&&lenis.start();setTimeout(()=>{if(!mn.classList.contains('open'))mn.hidden=true;},450);}}
-mb.addEventListener('click',()=>setMenu(mb.getAttribute('aria-expanded')!=='true'));
-qa('a',mn).forEach(a=>a.addEventListener('click',()=>setMenu(false)));
-matchMedia('(min-width: 1024px)').addEventListener('change', event=>{
-  if(event.matches && root.classList.contains('menu-open')) setMenu(false);
+const mb=q('.menu-button'), mn=q('#mobile-nav'), brand=q('.brand');
+const desktopMenu=matchMedia('(min-width: 1024px)');
+const menuLinks=qa('a',mn), menuBackground=qa('.skip, main, footer, .mobile-cta');
+let menuCloseTimer;
+const isMenuOpen=()=>mb.getAttribute('aria-expanded')==='true';
+function setMenu(open){
+  if(open===isMenuOpen()) return;
+  clearTimeout(menuCloseTimer);
+  mb.setAttribute('aria-expanded',open);
+  q('.mb-label',mb).textContent=open?'Fechar':'Menu';
+  root.classList.toggle('menu-open',open);
+  menuBackground.forEach(el=>{el.inert=open;});
+  if(open){
+    mn.hidden=false;
+    mn.inert=false;
+    mn.scrollTop=0;
+    lenis?.stop();
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      if(!isMenuOpen()) return;
+      mn.classList.add('open');
+      if(d.activeElement===mb) menuLinks[0].focus({preventScroll:true});
+    }));
+  }else{
+    if(mn.contains(d.activeElement)||d.activeElement===mb){
+      (desktopMenu.matches?brand:mb).focus({preventScroll:true});
+    }
+    mn.inert=true;
+    mn.classList.remove('open');
+    lenis?.start();
+    menuCloseTimer=setTimeout(()=>{mn.hidden=true;},450);
+  }
+}
+mb.addEventListener('click',()=>setMenu(!isMenuOpen()));
+[brand,...menuLinks].forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+desktopMenu.addEventListener('change',e=>{if(e.matches) setMenu(false);});
+d.addEventListener('keydown',e=>{
+  if(!isMenuOpen()) return;
+  if(e.key==='Escape'){ e.preventDefault(); setMenu(false); mb.focus({preventScroll:true}); }
+  if(e.key!=='Tab') return;
+  const last=menuLinks.at(-1);
+  if(e.shiftKey&&d.activeElement===brand){ e.preventDefault(); last.focus(); }
+  else if(!e.shiftKey&&d.activeElement===last){ e.preventDefault(); brand.focus(); }
 });
-d.addEventListener('keydown',e=>{if(e.key==='Escape'&&root.classList.contains('menu-open')){setMenu(false);mb.focus();}});
 
 /* -- Rolagem suave para âncoras (usa Lenis quando ativo) -- */
 d.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]'); if(!a||a.dataset.profile) return; const id=a.getAttribute('href'); const t=id==='#inicio'?null:q(id); if(id!=='#inicio'&&!t) return;
@@ -879,7 +912,7 @@ function motion(){
    /* -- HERO: pin + scrub do vídeo + título sobe/some + overlay escurece + vídeo vira card -- */
    if(!phone){
      const endClip=desk?'inset(11% 5% 11% 49% round 28px)':'inset(14% 5% 45% 5% round 22px)';
-     const tl=gsap.timeline({defaults:{ease:'none'},scrollTrigger:{trigger:'.hero',start:'top top',end:desk?'+=230%':'+=170%',pin:'.hero-pin',scrub:desk?1:.5,anticipatePin:1,
+     const tl=gsap.timeline({defaults:{ease:'none'},scrollTrigger:{trigger:'.hero',start:0,end:desk?'+=230%':'+=170%',pin:'.hero-pin',scrub:desk?1:.5,anticipatePin:1,
        onUpdate:s=>{window.__heroVideo.target=s.progress;}}});
      tl.fromTo('.hero-media-in',{scale:1},{scale:1.14,duration:.42},0)
        .fromTo('.hero-shade-2',{opacity:0},{opacity:1,duration:.36},0)
